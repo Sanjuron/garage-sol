@@ -9,19 +9,17 @@ import jsPDF from 'jspdf';
 class pdfGenerator extends PureComponent{
 
     //initilisatiion du constructeur
-    // constructor(props) {
-    //     super(props)
+    constructor(props) {
+        super(props)
 
-    //     this.state = {
-    //         title: "salut"
-    //     }
-    // }
+        this.state = {
+            title: "salut"
+        }
+    }
 
 
     //jspdf generator function
-    jsPdfGenerator = ({contracts})  => {
-        const contractList = contracts.map(contract => {
-
+    jsPdfGenerator = () => {
         var doc = new jsPDF('p', 'pt');
 
         doc.text(20,20, "Contrat de location")
